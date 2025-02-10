@@ -21,7 +21,7 @@ while t>=1:
     if movable(r+dxs[direction], c+dys[direction]):
         r, c = r+dxs[direction], c+dys[direction]
     else:
-        direction = (direction + 3)%4
+        direction = 3-direction
     t-=1
 
 print(r, c)
