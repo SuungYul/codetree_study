@@ -5,19 +5,14 @@ y = [p[1] for p in points]
 
 # Write your code here!
 max_width = 0
-d = 0
-h = 0
-for i in range(n):
-    for j in range(n):
-        if i == j:
-            continue
-        if y[i] == y[j]:
-            d = abs(x[i]-x[j])
-        for k in range(n):
-            if x[k] == x[i]:
-                h = abs(y[k]-y[i])
-            if x[k] == x[j]:
-                h = abs(y[k]-y[j])
-            max_width = max(max_width, d*h)        
+def area(x1, y1, x2, y2, x3, y3):
+    return abs((x1 * y2 + x2 * y3 + x3 * y1) - 
+               (x2 * y1 + x3 * y2 + x1 * y3))
 
+for i in range(n):
+    for j in range(i+1,n):
+        for k in range(j+1, n):
+            if (x[i]==x[j] or x[i]==x[k] or x[j] == x[k]) and (y[i]==y[j] or y[i]==y[k] or y[j]==y[k]):
+                 max_width = max(max_width, area(x[i], y[i], x[j], y[j],x[k], y[k]))
+        
 print(max_width)
