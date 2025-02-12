@@ -2,7 +2,7 @@ n = int(input())
 points = [tuple(map(int, input().split())) for _ in range(n)]
 
 # Write your code here!
-min_width = 10**9
+min_width = 10**18
 
 for i in range(n):
     l = points[:i] + points[i+1:]
