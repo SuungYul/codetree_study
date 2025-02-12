@@ -15,13 +15,13 @@ l_c2 = list()
 
 
 for i in range(-2, 3):
-    l_a1.append(l[a1-i])
-    l_b1.append(l[b1-i])
-    l_c1.append(l[c1-i])
+    l_a1.append(l[(a1-i)%N])
+    l_b1.append(l[(b1-i)%N])
+    l_c1.append(l[(c1-i)%N])
 
-    l_a2.append(l[a2-i])
-    l_b2.append(l[b2-i])
-    l_c2.append(l[c2-i])
+    l_a2.append(l[(a2-i)%N])
+    l_b2.append(l[(b2-i)%N])
+    l_c2.append(l[(c2-i)%N])
 
 s = set()
 
