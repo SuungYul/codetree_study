@@ -1,11 +1,11 @@
 ability = list(map(int, input().split()))
 
 # Write your code here!
-min_diff = 1000000
+min_diff = 100000000
 
 def get_diff(i, j):
     sum1 = ability[i] + ability[j]
-    md = 1000000
+    md = 100000000
     for k in range(5):
         for m in range(k+1,6):
             if i!=k and i!=m and j!=k and j!=m:
