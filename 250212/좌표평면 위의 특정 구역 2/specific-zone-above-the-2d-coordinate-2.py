@@ -10,7 +10,7 @@ for i in range(n):
     y = [p[1] for p in l]
 
     width = (max(x)-min(x))*(max(y)-min(y))
-    if width>0:
-        min_width = min(min_width, width)
+
+    min_width = min(min_width, width)
 
 print(min_width)
