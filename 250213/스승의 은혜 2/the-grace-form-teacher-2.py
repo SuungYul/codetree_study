@@ -17,6 +17,6 @@ for i in range(N):
         cnt+=1
         sum_p+=P[j]
     
-    max_p[sum_p-1] = cnt
+    max_p[B-bound-1] = max(max_p[B-bound-1],cnt)
 
 print(max(max_p))
