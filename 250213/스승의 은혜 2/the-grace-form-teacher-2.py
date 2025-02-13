@@ -7,6 +7,8 @@ max_p = [0]* B
 P.sort(reverse=True)
 
 for i in range(N):
+    if P[i] // 2 > B:
+        continue
     sum_p = P[i] // 2
     cnt = 1
     bound = B - sum_p
@@ -17,6 +19,6 @@ for i in range(N):
         cnt+=1
         sum_p+=P[j]
     
-    max_p[B-bound-1] = max(max_p[B-bound-1],cnt)
+    max_p[sum_p-1] = max(max_p[sum_p-1],cnt)
 
 print(max(max_p))
