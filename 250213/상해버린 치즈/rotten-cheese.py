@@ -33,8 +33,8 @@ for i in range(D):
             if sick_person in c_p[c]:
                 if time + 1  <=sick_time:
                     possible_sick_cheese[c] = True
-                else:
-                    possible_sick_cheese[c] = False
+                # else:
+                #     possible_sick_cheese[c] = False
 
             if possible_sick_cheese[c]:
                 if sick_person not in c_p[c]:
