@@ -35,6 +35,10 @@ for i in range(D):
                     possible_sick_cheese[c] = True
                 else:
                     possible_sick_cheese[c] = False
+
+            if possible_sick_cheese[c]:
+                if sick_person not in c_p[c]:
+                    possible_sick_cheese[c] = False
 max_p = 0
 for c in range(M):
     if possible_sick_cheese[c]:
