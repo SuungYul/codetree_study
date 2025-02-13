@@ -3,6 +3,7 @@ arr = [tuple(map(int, input().split())) for _ in range(n)]
 # Write your code here!
 
 def f(l):
+    l.sort()
     for i in range(len(l)):
         a, b = l[i]
         for j in range(i+1, len(l)):
@@ -20,7 +21,7 @@ for i in range(n):
             del tmp[k]
             del tmp[j]
             del tmp[i]
-            
+            # print(tmp, f(tmp))
             if f(tmp):
                 cnt+=1
 
