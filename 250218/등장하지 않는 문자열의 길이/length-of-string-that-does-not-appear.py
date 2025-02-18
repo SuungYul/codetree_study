@@ -5,10 +5,11 @@ str = input()
 
 cnt = 0
 for i in range(N):
-    s = str[:i+1]
-    if s in str[i+1:]:
-        cnt = len(s)
-    else:
-        break
+    for j in range(i+1, N):   
+        s = str[i:j]
+        if s in str[j:]:
+            cnt = max(cnt,len(s))
+        else:
+            break
 
 print(cnt+1)
