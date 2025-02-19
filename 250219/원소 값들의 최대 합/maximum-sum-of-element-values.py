@@ -9,9 +9,9 @@ for i in range(1, n+1):  # 시작 위치
     start = i  # 시작값 설정
 
     for j in range(m):
-        if start in visited:  # 이미 방문한 곳이면 탈출 (사이클 감지)
-            break
-        visited.add(start)
+        # if start in visited:  # 이미 방문한 곳이면 탈출 (사이클 감지)
+        #     break
+        # visited.add(start)
 
         res += start  # 현재 위치 값 누적
         start = a[start]  # 다음 이동 위치
