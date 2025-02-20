@@ -5,10 +5,11 @@ a, b = list(a), list(b)
 
 # Write your code here!
 s = set()
-for i in range(a[0], b[0]+1):
+for i in range(int(a[0]/2), int(b[0]/2)+1):
     s.add(i)
 
-for i in range(1,n):
+for i in range(n):
+    # print(s)
     for s1 in list(s):
         x = s1 * (2**(i+1))
         if x < a[i] or x > b[i]:
