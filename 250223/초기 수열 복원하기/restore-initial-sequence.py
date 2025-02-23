@@ -9,7 +9,7 @@ for i in range(1,n+1):
     l.clear()
     l.append(i)
     for j in range(n-1):
-        if abs(adjacent[j] - l[len(l)-1]) in l:
+        if abs(adjacent[j] - l[len(l)-1]) in l or abs(adjacent[j] - l[len(l)-1]) < 1 or abs(adjacent[j] - l[len(l)-1]) > n:
             continue
         l.append(abs(adjacent[j] - l[len(l)-1]))
     
