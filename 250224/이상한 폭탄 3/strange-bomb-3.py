@@ -9,4 +9,7 @@ for i in range(N):
         if num[i] == num[j] and abs(i-j)<=K:
             d[num[i]]+=1
 
-print(max(key for key, value in d.items() if value == max(d.values())))
+if max(d.values()) == 0:
+    print(0)
+else:
+    print(max(key for key, value in d.items() if value == max(d.values())))
