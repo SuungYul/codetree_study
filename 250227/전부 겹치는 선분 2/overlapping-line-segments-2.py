@@ -11,7 +11,7 @@ for i in range(n):
     x = [t[0] for t in tmp]
     y = [t[1] for t in tmp]
     
-    if min(y) <= max(x):
+    if min(y) >= max(x):
         possible = True
 
 print("Yes" if possible else "No")
