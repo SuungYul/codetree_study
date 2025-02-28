@@ -7,6 +7,9 @@ u = [int(msg[1]) for msg in messages]
 un_read = [chr(i) for i in range(ord('A'), ord('A')+n)]
 # print(un_read)
 for i in range(p-1, m):
+    if i>0 and u[i-1] == u[i]:
+        if c[i-1] in un_read:
+            un_read.remove(c[i-1])
     if u[i] == 0:
         un_read.clear()
     if c[i] in un_read:
