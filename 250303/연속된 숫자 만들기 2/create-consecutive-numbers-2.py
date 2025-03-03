@@ -1,10 +1,25 @@
+from math import ceil
 pos = list(map(int, input().split()))
-pos.sort()
-# Please write your code here.
-# pos[0] pos[1] pos[2]
-if pos[1]-pos[0] == 1 and pos[2] - pos[1] == 1:
-    print(0)
-elif pos[1]-pos[0] == 1 or pos[2]-pos[1] == 1 or pos[1]-pos[0] == 2 or pos[2] - pos[1] == 2:
-    print(1)
-else:
-    print(2)
+
+cnt = 0
+
+while True:
+    pos.sort()
+    if pos[1] - pos[0] == 1 and pos[2] - pos[1] == 1:
+        break
+    
+    if pos[1] - pos[0] < pos[2] - pos[1]:
+        if pos[1] - pos[0] == 1:
+            pos[0] = min(pos[1] + 2, ceil((pos[1]+pos[2])/2))
+            cnt+=1
+        else:
+            pos[2] = ceil((pos[0]+pos[1])/2)
+            cnt+=1
+    else:
+        if pos[2] - pos[1] == 1:
+            pos[2] = max(pos[1] - 2, ceil((pos[0]+pos[1])/2))
+            cnt+=1
+        else:
+            pos[0] = ceil((pos[2]+pos[1])/2)
+            cnt+=1    
+print(cnt)
