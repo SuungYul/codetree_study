@@ -13,13 +13,13 @@ while True:
             pos[0] = min(pos[1] + 2, ceil((pos[1]+pos[2])/2))
             cnt+=1
         else:
-            pos[2] = ceil((pos[0]+pos[1])/2)
+            pos[2] = max(pos[1]-2,ceil((pos[0]+pos[1])/2))
             cnt+=1
     else:
         if pos[2] - pos[1] == 1:
             pos[2] = max(pos[1] - 2, ceil((pos[0]+pos[1])/2))
             cnt+=1
         else:
-            pos[0] = ceil((pos[2]+pos[1])/2)
+            pos[0] = min(pos[1]+2,ceil((pos[2]+pos[1])/2))
             cnt+=1    
 print(cnt)
