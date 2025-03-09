@@ -17,8 +17,14 @@ for i in range(10):
             r_y = i
 
 if l_x == b_x and b_x == r_x:
-    print(abs(l_y-b_y)+1)
+    if abs(l_y-b_y)<abs(l_y-r_y):
+        print(abs(l_y-b_y)-1)
+    else:
+        print(abs(l_y-b_y)+1)
 elif l_y == b_y and b_y == r_y:
-    print(abs(l_x-b_x)+1)
+    if abs(l_x-b_x)<abs(l_x-r_x):
+        print(abs(l_x-b_x)-1)
+    else:
+        print(abs(l_x-b_x)+1)
 else:
     print(abs(l_x-b_x)+abs(l_y-b_y)-1)
