@@ -17,14 +17,14 @@ for i in range(10):
             r_y = i
 
 if l_x == b_x and b_x == r_x:
-    if abs(l_y-b_y)<abs(l_y-r_y):
-        print(abs(l_y-b_y)-1)
-    else:
+    if r_y > min(l_y, b_y) and r_y < max(l_y, b_y):
         print(abs(l_y-b_y)+1)
-elif l_y == b_y and b_y == r_y:
-    if abs(l_x-b_x)<abs(l_x-r_x):
-        print(abs(l_x-b_x)-1)
     else:
+        print(abs(l_y-b_y)-1)
+elif l_y == b_y and b_y == r_y:
+    if r_x > min(l_x, b_x) and r_x < max(l_x, b_x):
         print(abs(l_x-b_x)+1)
+    else:
+        print(abs(l_x-b_x)-1)
 else:
     print(abs(l_x-b_x)+abs(l_y-b_y)-1)
