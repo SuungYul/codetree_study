@@ -16,9 +16,9 @@ for i in range(10):
             r_x = j
             r_y = i
 
-if (l_x == 0 and b_x == 0 and r_x == 0) or (l_x == 9 and b_x == 9 and r_x == 9):
+if l_x == b_x and b_x == r_x:
     print(abs(l_y-b_y)+1)
-elif (l_y == 0 and b_y == 0 and r_y == 0) or (l_y == 9 and b_y == 9 and r_y == 9):
+elif l_y == b_y and b_y == r_y:
     print(abs(l_x-b_x)+1)
 else:
     print(abs(l_x-b_x)+abs(l_y-b_y)-1)
